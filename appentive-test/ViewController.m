@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "ATConnect.h"
 
 @interface ViewController ()
+
+@property BOOL engaged;
 
 @end
 
@@ -16,7 +19,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.engaged = FALSE;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+}
+
+- (void)keyboardWillShow:(NSNotification *)notification {
+    if(!self.engaged) {
+        [[ATConnect sharedConnection] engage:@"init" fromViewController:self];
+        self.engaged = TRUE;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

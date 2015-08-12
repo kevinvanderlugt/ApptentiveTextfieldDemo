@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C8607884906DC91B4837A3C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B3EE980D28CF17A1438BC47 /* libPods.a */; };
 		925FE03B1B7AC29C0016679E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 925FE03A1B7AC29C0016679E /* main.m */; };
 		925FE03E1B7AC29C0016679E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 925FE03D1B7AC29C0016679E /* AppDelegate.m */; };
 		925FE0411B7AC29C0016679E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 925FE0401B7AC29C0016679E /* ViewController.m */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B451C77A050E564822CFCC1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		2B3EE980D28CF17A1438BC47 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		925FE0351B7AC29C0016679E /* appentive-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "appentive-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		925FE0391B7AC29C0016679E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		925FE03A1B7AC29C0016679E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +43,7 @@
 		925FE04E1B7AC29C0016679E /* appentive-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "appentive-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		925FE0531B7AC29C0016679E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		925FE0541B7AC29C0016679E /* appentive_testTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = appentive_testTests.m; sourceTree = "<group>"; };
+		E78693807C6E06DCAEA00F95 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C8607884906DC91B4837A3C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +65,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A07DCBDA9940A97F031AF24 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E78693807C6E06DCAEA00F95 /* Pods.debug.xcconfig */,
+				1B451C77A050E564822CFCC1 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		499A6CA46B6EEB6B467ADDF2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B3EE980D28CF17A1438BC47 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		925FE02C1B7AC29C0016679E = {
 			isa = PBXGroup;
 			children = (
 				925FE0371B7AC29C0016679E /* appentive-test */,
 				925FE0511B7AC29C0016679E /* appentive-testTests */,
 				925FE0361B7AC29C0016679E /* Products */,
+				3A07DCBDA9940A97F031AF24 /* Pods */,
+				499A6CA46B6EEB6B467ADDF2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 925FE0581B7AC29C0016679E /* Build configuration list for PBXNativeTarget "appentive-test" */;
 			buildPhases = (
+				9C519A434195298CDE33FF69 /* Check Pods Manifest.lock */,
 				925FE0311B7AC29C0016679E /* Sources */,
 				925FE0321B7AC29C0016679E /* Frameworks */,
 				925FE0331B7AC29C0016679E /* Resources */,
+				1CF0A982895162C4B1C619B1 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +239,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1CF0A982895162C4B1C619B1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C519A434195298CDE33FF69 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		925FE0311B7AC29C0016679E /* Sources */ = {
@@ -347,6 +406,7 @@
 		};
 		925FE0591B7AC29C0016679E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E78693807C6E06DCAEA00F95 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "appentive-test/Info.plist";
@@ -357,6 +417,7 @@
 		};
 		925FE05A1B7AC29C0016679E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B451C77A050E564822CFCC1 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "appentive-test/Info.plist";
@@ -418,6 +479,7 @@
 				925FE05A1B7AC29C0016679E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		925FE05B1B7AC29C0016679E /* Build configuration list for PBXNativeTarget "appentive-testTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +488,7 @@
 				925FE05D1B7AC29C0016679E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

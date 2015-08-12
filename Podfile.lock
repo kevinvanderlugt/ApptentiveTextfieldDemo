@@ -1,0 +1,12 @@
+PODS:
+  - apptentive-ios (1.7.3):
+    - apptentive-ios/arc-files (= 1.7.3)
+  - apptentive-ios/arc-files (1.7.3)
+
+DEPENDENCIES:
+  - apptentive-ios
+
+SPEC CHECKSUMS:
+  apptentive-ios: be0b8dbc17b443eb624b3a015017f521b096f003
+
+COCOAPODS: 0.38.2
